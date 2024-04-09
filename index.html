@@ -8,18 +8,23 @@
 
 </head>
 <body>
-    <div style="text-align: center">
+    <div>
 
         <form id="minhaFila">
             <fieldset>
                 <legend><b>FILA</b></legend>
-                Nome a ser adicionado na fila: <input type="text" id = "nome" required placeholder="Ex.: João"><br><br>
-                <button id="btAdd"> Adicionar</button> 
-                <button id="btRemover"> Remover</button> 
+                Nome a ser adicionado na fila: <br> <input type="text" id = "inputNome" required placeholder="Ex.: João"><br><br>
+                <button id="btAdd"> Adicionar na fila</button> 
+                <button id="btRemover"> Remover da fila</button> 
                 <button id="btLimpar"> Limpar tudo na fila</button><br><br>            
             </fieldset>
         </form>
     </div>
+    <hr>
+    <pre id="preObjeto"></pre>
+    <hr>
     
-</body>
+        <ul id="listaDaFila"></ul>
+
+    </body>
 </html>
