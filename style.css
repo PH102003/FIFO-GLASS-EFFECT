@@ -2,12 +2,12 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-image: url("C:/Users/pedro/FIFO_GE/FIFO-GLASS-EFFECT/foto-legal.jpeg");
     background-size: cover;
-    display: flex;
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    align-items: center; /* Centraliza o conteúdo verticalmente */
+    
+    justify-content: center; /* centraliza o conteúdo horizontalmente */
+    align-items: center; /* centraliza o conteúdo verticalmente */
+    margin: 0;
 }
 
-  
 
 fieldset {
     background: rgba(255, 255, 255, 0.5);
@@ -26,11 +26,10 @@ fieldset {
 }
 
 legend {
-    color: rgb(17, 176, 250);
+    color: rgb(2, 69, 255);
 }
 
-inputNome,
-label {
+inputNome, label {
     text-align: left;
     display: block;
     margin: 0 auto;
@@ -38,7 +37,7 @@ label {
 }
 
 li {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.57);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
@@ -46,10 +45,10 @@ li {
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-color: rgb(129, 0, 119);
     display: inline-block;
-    max-width: 100px;
-    /*os itens agora são exibidos em linha, horizontalmente*/
-    margin-right: 15px;
-    /* adiciona um espaço entre os elementos */
+    max-width: 100px;       /*os itens agora são exibidos em linha, horizontalmente*/
+
+    margin-right: 15px;    /* adiciona espaço entre os elementos */
+
     color: rgb(250, 250, 250);
 
 }
