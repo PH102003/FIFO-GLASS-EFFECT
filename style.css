@@ -1,7 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 
-    background-color: rgb(0, 4, 250);
+    background-color: rgb(245, 245, 245);
 }
 #minhaFila fieldset{
 background: rgba(255, 255, 255, 0.5);
@@ -18,11 +18,18 @@ legend{
     color: bisque;
 }
 
-inputNome, #minhaFila label{
+inputNome,  label{
     text-align: left;
     display: block;
     margin: 0 auto;
     
 }
+
+     li{
+        display: inline-block; /*os itens agora são exibidos em linha, horizontalmente*/
+        margin-right: 10px; /* adiciona um espaço entre os elementos */
+    }
+    
+
 
 

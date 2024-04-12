@@ -1,52 +1,38 @@
 let fila = [];
-
 const inputNome = document.getElementById("inputNome");
 const btAdd = document.getElementById("btAdd");
 const btRemover = document.getElementById("btRemover");
 const listaDaFila = document.getElementById("listaDaFila");
+//const preObjeto = document.getElementById("preObjeto");
 
-//no evento de "click" (mouse) do botão add ou botao remover, chama as funções respectivas
-btAdd.addEventListener("click", handleAdicionarNome);
-btRemover.addEventListener("click", handleRemoverNome);
-
+const refreshObjeto = () => {
+    listaDaFila.innerHTML = ""; // limpa a lista
+    for (const nome of fila) {
+        const li = document.createElement("li"); //cria elemento <li>
+        li.textContent = nome; // define o texto do elemento <li> como o nome
+        listaDaFila.appendChild(li); // adiciona o elemento <li> à lista
+    }
+};
 
 const handleAdicionarNome = () => {
-    //verifica se a entrada não foi vazia  
-    if (inputNome.value !== '') {
-        fila.push(inputNome.value);
-        //limpa o campo de entrada
+    let nome = inputNome.value; // remove espaços em branco do início e do fim
+    if (nome !== '') {
+        //insere na fila  
+        fila.push(nome); 
         refreshObjeto();
-        document.getElementById('inputNome').value = '';
+        //zera o campo de nome  
         inputNome.value = "";
         inputNome.focus();
     }
+};
 
-}
-/*quando ele clicar no botao de remover, ele deve automaticamente
-remover o primeiro elemento*/
 const handleRemoverNome = () => {
-    //verifica se tem elementos na fila pra remover
     if (fila.length > 0) {
+        //remove primeiro item da fila
         fila.shift();
         refreshObjeto();
     }
+};
 
-
-}
-
-
-const refreshObjeto = () => {
-    listaDaFila.innerHTML = ""; // limpa a listaDaFila
-    fila.forEach((nome, index) => { // itera a fila
-            /*
-          na criação da constante "textNode", 
-          ele se utiliza da transformação em strings de acordo com os dados de nome,
-           onde o nome deverá ser exibido na instância do "objetoExibicao" para mostrar o nome da pessoa na fila, 
-           após  isso o document.createElement("li"), faz literalmente a criação da tag <li>, por fim, 
-          o appendChild, faz com que os elementos de textNode sejam exibidos na tag <li>
-        */
-        const li = document.createElement("li"); //cria a tag <li> 
-        li.textContent = nome; // Define o texto do elemento li
-        listaDaFila.appendChild(li); // Adiciona o li à lista
-    });
-}
+btAdd.onclick = handleAdicionarNome;
+btRemover.onclick = handleRemoverNome;
